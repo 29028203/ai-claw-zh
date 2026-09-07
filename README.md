@@ -55,6 +55,6 @@
 
 ---
 
-**官方持续更新入口：[老手村 官网](https://www.laoshoucun.com/)**
+**官方持续更新入口：[AI办公智能体](https://www.laoshoucun.com/)**
 
 © [老手村](https://www.laoshoucun.com/) · 本仓库为官网内容镜像，文章版权归原作者所有。
