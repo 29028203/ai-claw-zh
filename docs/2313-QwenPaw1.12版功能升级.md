@@ -1,0 +1,49 @@
+# QwenPaw 1.12版功能升级
+
+> 原文链接：[https://www.laoshoucun.com/copawzn/2313](https://www.laoshoucun.com/copawzn/2313)
+
+<p>✨ 新增功能<br />
+<strong>Agent 系统</strong></p>
+<p>Mission 模式：通过 /mission 命令启动自主多阶段任务执行，Agent 自动规划、执行并迭代修正。支持 /mission status 和 /mission list 实时查看任务进度 (#3364,#3480)</p>
+<p>文本回复自动重试：开启后，若模型仅返回文本而未调用工具，Agent 会自动追加提示并重试最多两轮推理 (#3107)<br />
+自定义 Agent ID：在控制台或 API 创建 Agent 时可指定自定义 ID (#3333)<br />
+ACP 外部 Agent 委托：通过 delegate_external_agent 工具将任务委托给外部编程 Agent（OpenCode、Qwen、Claude Code、Codex），支持权限管控和实时流式输(#3340)<br />
+Agent CLI 创建：通过 qwenpaw agents create 命令行创建 Agent，支持模板选择（default、local、qa）和工作区初始化 (#3385)</p>
+<p><strong>CLI</strong></p>
+<p>qwenpaw doctor：新增诊断命令，可检查运行环境、配置、供应商、频道、技能、MCP、记忆、安全等，doctor fix 可自动修复常见问题 (#3371)<br />
+qwenpaw skills info：通过命令行查看技能详情（启用状态、频道、路径、描述），同时在聊天中新增 /skills 斜杠命令 (#3459)</p>
+<p><strong>记忆</strong></p>
+<p>记忆整理（Dream）：定时运行&#8221;Dream&#8221;Agent 自动去重和整理 MEMORY.md 长期记忆 (#2177)<br />
+递归文件监听：新增 recursive_file_watcher 选项，支持将子目录文件纳入记忆索引 (#3347)<br />
+控制台与界面</p>
+<p>技能导入中心：重新设计技能导入弹窗，支持 URL 校验、技能市场集成，导入冲突时提供覆盖确认 (#2412, #3415, #3482)<br />
+调试页面：设置中新增调试页面，可实时查看后端日志 (#3478, #3511)<br />
+频道（Channels）</p>
+<p>微信引用消息：支持解析微信引用/回复消息，涵盖文本、图片、语音、文件和视频类型 (#3483)</p>
+<p><strong>🔄 变更</strong><br />
+供应商排序优化：设置页中供应商列表现按可用性排序，已配置且可用的供应商优先展示 (#3458)<br />
+Agent 通信工具拆分：Agent 间通信工具拆分为同步的 chat_with_agent 和异步的 submit_to_agent / check_agent_task，后台任务提交和查询更加清晰 (#3485)</p>
+<p><strong>🐛 修复</strong><br />
+控制台与界面</p>
+<p>清除聊天记录：/clear 命令现可正确清除控制台中的聊天历史 (#3348)<br />
+Token 用量排序：Token 用量&#8221;按日期&#8221;表格改为按日期降序排列 (#3387)<br />
+定时任务 ID 提示：修正定时任务 ID 提示文案为系统自动生成的 UUID (#3404)<br />
+消息历史导航：修复斜杠命令建议弹出时按上箭头误触发消息历史的问题 (#3444)<br />
+模型供应商</p>
+<p>图片 MIME 类型：将数据 URL 中的 image/jpg 统一为 image/jpeg，避免被严格校验的 API 拒绝 (#3313)<br />
+多模态工具调用排序：修复提升的图片消息打断工具结果连续性导致 OpenAI 和 Anthropic 400 错误的问题 (#3299)<br />
+供应商类型冲突：修复同一供应商从不同导入路径加载时的 Pydantic 类型校验崩溃 (#3431)</p>
+<p><strong>Agent 系统</strong></p>
+<p>后台任务追踪：通过 AgentApp API 发起的后台任务现纳入 TaskTracker 管理，避免重载或关闭时被意外取消 (#3305)<br />
+记忆压缩防重入：修复记忆压缩钩子在单次推理中重复执行的问题 (#3461)<br />
+频道（Channels）</p>
+<p>Discord 线程路由：Discord 线程消息现可正确路由到对应的线程会话，不再错误归入父频道 (#3144)<br />
+微信输入状态：修复微信输入指示器的后台任务泄漏问题，减少 CPU 和内存占用 (#3488)</p>
+<p><strong>桌面端</strong></p>
+<p>Python 环境隔离：桌面打包版本设置 PYTHONNOUSERSITE=1，防止用户安装的包与内置依赖冲突 (#3476)<br />
+🔧 CI 与基础设施<br />
+频道测试基础设施：新增频道契约测试、单元测试、CI 工作流和 Makefile 构建目标 (#2506)</p>
+
+---
+
+原文链接：[https://www.laoshoucun.com/copawzn/2313](https://www.laoshoucun.com/copawzn/2313)
