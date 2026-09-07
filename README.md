@@ -1,18 +1,10 @@
 # AI 小龙虾智能体使用指南
 
-AutoClaw、ArkClaw、CoPaw/QwenPaw、QClaw、Miclaw、OpenClaw、RedClaw 等"小龙虾"智能体家族的中文说明与实战合集。内容整理自老手村官网。
+## 小龙虾智能体家族介绍
 
-**官方持续更新入口：[老手村 官网](https://www.laoshoucun.com/)** —— 完整教程与最新文章以官网为准，本仓库为定期同步的中文内容镜像。
+本仓库收录老手村官网关于 OpenClaw 生态"小龙虾"智能体家族的中文说明与实战文章，覆盖 AutoClaw（澳龙，智谱 AI 出品）、ArkClaw、CoPaw/QwenPaw、QClaw、Miclaw、OpenClaw、RedClaw 七款成员。它们多基于 OpenClaw 开源生态打造，把大模型接进飞书、WebChat、桌面端等日常入口，让本地或云端设备按指令自动完成办公自动化、代码与运维任务；站内文章集中解决安装配置、连接与权限异常排查、积分消耗优化、多 Agent 调度等实际使用问题，适合正在用或想上手"小龙虾"的用户按图索骥。
 
-## 仓库简介
-
-本仓库把 老手村 上「AI 小龙虾智能体使用指南」主题的公开文章收拢为 Markdown 合集：每篇文档顶部与文末都保留了官网原文链接，可在线阅读，也可以 `git clone` 到本地，用于检索、离线阅读或交给 AI 工具做学习总结。
-
-## 目录结构
-
-- `docs/` — 教程与使用指南（42 篇）：安装、上手、场景实战、答疑。
-
-## 教程与指南
+## 小龙虾智能体家族教程与指南
 
 - [小米龙虾 miclaw 电脑端内测！普通台式机也能装](https://www.laoshoucun.com/miclawzn/2333) · [📄 仓库内阅读](docs/2333-小米龙虾miclaw电脑端内测！普通台式机也能装.md)
 - [Autoclaw 连接异常问题处理](https://www.laoshoucun.com/autoclawzl/2330) · [📄 仓库内阅读](docs/2330-Autoclaw连接异常问题处理.md)
@@ -58,5 +50,7 @@ AutoClaw、ArkClaw、CoPaw/QwenPaw、QClaw、Miclaw、OpenClaw、RedClaw 等"小
 - [ArkClaw 小龙虾是什么？](https://www.laoshoucun.com/arkclawzn/1953) · [📄 仓库内阅读](docs/1953-ArkClaw小龙虾是什么？.md)
 
 ---
+
+**官方持续更新入口：[老手村 官网](https://www.laoshoucun.com/)**
 
 © [老手村](https://www.laoshoucun.com/) · 本仓库为官网内容镜像，文章版权归原作者所有。
